@@ -1,5 +1,7 @@
-﻿* Encoding: UTF-8.
-* Spearman's rho.
+* Description: Examples of exercises which I have done using SPSS.
+
+* Encoding: UTF-8.
+* Spearmans rho.
 WEIGHT BY V870.
 FREQUENCIES polint bildung.
 CROSSTABS polint by bildung
@@ -7,20 +9,20 @@ CROSSTABS polint by bildung
 NONPAR CORR polint bildung
 /PRINT=BOTH NOSIG.
 
-*Pearson's r.
+*Pearsons r.
 FREQUENCIES V417 V610.
 DESCRIPTIVESC V417 V610
 /STATISTICS=MIN MAX RANGE MEAN VARIANCE STDDEV.
 CORRELATIONS V417 V610.
 
-*T-Test unabhängige Stichproben.
+*T-Test samples.
 T-TEST GROUPS V81 (1,2)
 /VARIABLES = V417.
 
 T-TEST GROUPS V81 (1,2)
 /VARIABLES=V610.
 
-* Lineare Regression.
+* Linear Regression.
 
 WEIGHT OFF.
 FREQUENCIES V419.
